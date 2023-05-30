@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müziğin Ritmini Hisset!</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    
+    <!--FontAwasome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animateWave.css">
+</head>
+<body class="dark font-poppins"> 
+    
+    <!--Header-->
+    <header class="bg-white text-prize-black dark:bg-prize-black dark:text-white">
+
+        <!--Image Background-->
+        <div class="relative min-h-[720px] h-[100vh] w-full">
+            <img class="relative object-cover w-full h-full" src="/public/assets/img/Background.png" alt="">
+        </div>
+
+        <section class="absolute top-0 left-0 right-0 z-10">
+
+            <!--Navbar-->
+            <nav class="container sticky flex items-center justify-between px-2 py-6 md:px-2">
+
+                <!--Social Media and Theme-->
+                <div class="flex items-center space-x-0 md:space-x-4">
+
+                    <!--Social Media-->
+                    <ul class="items-center hidden space-x-4 md:flex">
+                        <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+
+                    <div class="h-6 border-[1.5px] border-l border-white hidden md:flex"></div>
+
+                    <!--Label Area-->
+                    <label class="relative flex items-center cursor-pointer">
+                        
+                        <!--Checkbox-->
+                        <input type="checkbox" class="sr-only">
+
+                        <!--iconData-->
+                        <div class="flex p-1 transition duration-500 rounded-md bg-prize-black bg-gradient-to-r to-prize-pink from-prize-purple">
+                            <span class="flex items-center justify-center w-5 h-6 mr-1 bg-white rounded text-amber-950 dark:bg-transparent dark:text-white iconSun ">
+                                <i class="fas fa-sun"></i>
+                            </span>
+                            <span class="flex items-center justify-center w-5 h-6 text-white bg-transparent rounded dark:bg-prize-black dark:text-white iconMoon ">
+                                <i class="fas fa-moon"></i>
+                            </span>
+                        </div>
+
+                    </label>
+
+                </div>
+
+                <!--Logo-->
+                <a href="#" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="168" height="36" fill="none" viewBox="0 0 168 36">
+                        <path fill="#fff" d="M25.872 14.432a5.14 5.14 0 0 1-.648 2.52c-.416.784-1.08 1.416-1.992 1.896-.896.48-2.032.72-3.408.72h-2.808V26h-3.36V9.248h6.168c1.296 0 2.4.224 3.312.672.912.448 1.592 1.064 2.04 1.848.464.784.696 1.672.696 2.664Zm-6.192 2.424c.928 0 1.616-.208 2.064-.624.448-.432.672-1.032.672-1.8 0-1.632-.912-2.448-2.736-2.448h-2.664v4.872h2.664Zm11.938-2.088a4.755 4.755 0 0 1 1.68-1.656c.704-.4 1.504-.6 2.4-.6v3.528h-.888c-1.056 0-1.856.248-2.4.744-.528.496-.792 1.36-.792 2.592V26h-3.36V12.704h3.36v2.064Zm8.047-3.648c-.592 0-1.088-.184-1.488-.552a1.925 1.925 0 0 1-.576-1.416c0-.56.192-1.024.576-1.392.4-.384.896-.576 1.488-.576s1.08.192 1.464.576c.4.368.6.832.6 1.392 0 .56-.2 1.032-.6 1.416-.384.368-.872.552-1.464.552Zm1.656 1.584V26h-3.36V12.704h3.36Zm6.391 10.536h5.928V26h-9.744v-2.712l5.808-7.824H43.92v-2.76h9.648v2.712l-5.856 7.824Zm20.89-4.176c0 .48-.032.912-.096 1.296h-9.72c.08.96.416 1.712 1.008 2.256.592.544 1.32.816 2.184.816 1.248 0 2.136-.536 2.664-1.608h3.624c-.384 1.28-1.12 2.336-2.208 3.168-1.088.816-2.424 1.224-4.008 1.224-1.28 0-2.432-.28-3.456-.84a6.182 6.182 0 0 1-2.376-2.424c-.56-1.04-.84-2.24-.84-3.6 0-1.376.28-2.584.84-3.624a5.861 5.861 0 0 1 2.352-2.4c1.008-.56 2.168-.84 3.48-.84 1.264 0 2.392.272 3.384.816a5.63 5.63 0 0 1 2.328 2.328c.56.992.84 2.136.84 3.432Zm-3.48-.96c-.016-.864-.328-1.552-.936-2.064-.608-.528-1.352-.792-2.232-.792-.832 0-1.536.256-2.112.768-.56.496-.904 1.192-1.032 2.088h6.312Z"/>
+                        <path stroke="#fff" d="M.5.5h167v35H.5z"/>
+                        <path fill="url(#a)" d="M81 0h87v36H81z"/>
+                        <path fill="#fff" d="M108.92 9.248V26h-3.36V15.104L101.072 26h-2.544l-4.512-10.896V26h-3.36V9.248h3.816L99.8 21.704l5.328-12.456h3.792Zm15.874 3.456V26h-3.384v-1.68c-.432.576-1 1.032-1.704 1.368-.688.32-1.44.48-2.256.48-1.04 0-1.96-.216-2.76-.648-.8-.448-1.432-1.096-1.896-1.944-.448-.864-.672-1.888-.672-3.072v-7.8h3.36v7.32c0 1.056.264 1.872.792 2.448.528.56 1.248.84 2.16.84.928 0 1.656-.28 2.184-.84.528-.576.792-1.392.792-2.448v-7.32h3.384Zm8.403 13.512c-1.088 0-2.064-.192-2.928-.576-.864-.4-1.552-.936-2.064-1.608a4.092 4.092 0 0 1-.816-2.232h3.384c.064.512.312.936.744 1.272.448.336 1 .504 1.656.504.64 0 1.136-.128 1.488-.384.368-.256.552-.584.552-.984 0-.432-.224-.752-.672-.96-.432-.224-1.128-.464-2.088-.72-.992-.24-1.808-.488-2.448-.744a4.351 4.351 0 0 1-1.632-1.176c-.448-.528-.672-1.24-.672-2.136 0-.736.208-1.408.624-2.016.432-.608 1.04-1.088 1.824-1.44.8-.352 1.736-.528 2.808-.528 1.584 0 2.848.4 3.792 1.2.944.784 1.464 1.848 1.56 3.192h-3.216c-.048-.528-.272-.944-.672-1.248-.384-.32-.904-.48-1.56-.48-.608 0-1.08.112-1.416.336-.32.224-.48.536-.48.936 0 .448.224.792.672 1.032.448.224 1.144.456 2.088.696.96.24 1.752.488 2.376.744.624.256 1.16.656 1.608 1.2.464.528.704 1.232.72 2.112 0 .768-.216 1.456-.648 2.064-.416.608-1.024 1.088-1.824 1.44-.784.336-1.704.504-2.76.504Zm9.694-15.096c-.592 0-1.088-.184-1.488-.552a1.925 1.925 0 0 1-.576-1.416c0-.56.192-1.024.576-1.392.4-.384.896-.576 1.488-.576s1.08.192 1.464.576c.4.368.6.832.6 1.392 0 .56-.2 1.032-.6 1.416-.384.368-.872.552-1.464.552Zm1.656 1.584V26h-3.36V12.704h3.36Zm2.456 6.648c0-1.376.28-2.576.84-3.6.56-1.04 1.336-1.84 2.328-2.4.992-.576 2.128-.864 3.408-.864 1.648 0 3.008.416 4.08 1.248 1.088.816 1.816 1.968 2.184 3.456h-3.624c-.192-.576-.52-1.024-.984-1.344-.448-.336-1.008-.504-1.68-.504-.96 0-1.72.352-2.28 1.056-.56.688-.84 1.672-.84 2.952 0 1.264.28 2.248.84 2.952.56.688 1.32 1.032 2.28 1.032 1.36 0 2.248-.608 2.664-1.824h3.624c-.368 1.44-1.096 2.584-2.184 3.432-1.088.848-2.448 1.272-4.08 1.272-1.28 0-2.416-.28-3.408-.84a6.108 6.108 0 0 1-2.328-2.4c-.56-1.04-.84-2.248-.84-3.624Z"/>
+                        <defs>
+                        <linearGradient id="a" x1="81" x2="168" y1="0" y2="36" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#7000FF"/>
+                        <stop offset="1" stop-color="#FF67E7"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+
+                <!--Nav List-->
+                <ul class="items-center hidden h-full space-x-6 text-sm md:flex ">
+                    <li><a href="#" class="text-white transition duration-500 hover:text-prize-pink">Tüm Liste</a></li>
+                    <li><a href="#" class="text-white transition duration-500 hover:text-prize-pink">Kayıt Ol</a></li>
+                    <li><a href="#" class="px-3 py-2 text-black transition duration-500 bg-white hover:text-white hover:bg-gradient-to-r hover:to-prize-pink hover:from-prize-purple">Giriş Yap</a></li>
+                </ul>
+                
+                <!--Mobil Menu-->
+                <div class="block text-white dark:text-white ps-4 md:hidden">
+                    <i class="text-xl fas fa-bars"></i>
+                </div>
+
+            </nav>
+
+            <!--Main Section-->
+            <main class="xl:mt-16 animate-slideDown501s">
+
+                <!--Splide Slider-->
+                <div class="px-4 text-white xl:pr-16 xl:pl-12 splide evenSlide">
+                    <div class="splide__track">
+                        <!--Splide List-->
+                        <ul class="text-white splide__list">
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr1.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Caz Müzik</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr2.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Klasik Müzik</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr3.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Rock Müzik</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr4.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Türk Halk Müziği</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr1.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Caz Müzik</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!--Slider Item-->
+                            <li class="w-full my-4 cursor-pointer splide__slide group">
+                                <div class="z-10 flex justify-end invisible w-full transition-all duration-300 translate-y-0 opacity-0 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <p>Bu Tarzı Görün!</p>
+                                </div>
+                                <div class="absolute z-20 invisible transition-all duration-500 translate-y-0 opacity-0 top-2 -rotate-12 left-5 group-hover:visible group-hover:opacity-100 group-hover:-translate-y-3">
+                                    <div class="relative flex items-center justify-center rounded-full w-14 h-14 bg-gradient-to-r from-prize-purple to-prize-pink">
+                                        <p>Dinle</p>
+                                        <div class="absolute w-[4.3rem] h-[4.3rem] border-2 rounded-full opacity-100 border-prize-purple"></div>
+                                        <div class="absolute w-20 h-20 border-2 rounded-full opacity-25 border-prize-purple"></div>
+                                    </div>
+                                </div>
+                                <div class="relative overflow-hidden musCard">
+                                    <img class="w-full h-full transition-transform duration-500 transform scale-100 group-hover:scale-125" src="assets/img/music-tr2.png" alt="">
+                                    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center border-white border-[1px] border-opacity-25 group-hover:bg-prize-black group-hover:bg-opacity-50 group-hover:transition group-hover:duration-500">
+                                        <p class="invisible mb-5 group-hover:visible"><i class="mr-2 fas fa-heart"></i> Türünü Belirle</p>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 z-30 flex items-center justify-between backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                                        <p class="p-3">Klasik Müzik</p>
+                                        <i class="invisible p-3 transition duration-500 -translate-x-10 fas fa-arrow-right group-hover:translate-x-0 group-hover:visible"></i>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Main Content Details-->
+                <div class="container pt-4 xl:pt-16 ">
+                    <h1 class="text-3xl font-semibold text-center text-white xl:text-start xl:text-4xl xl:w-2/3 ">Seslerin Dünyasına Adım Atın: Müziğin Büyülü Evreninde Keşfe Çıkın</h1>
+                    <div class="flex flex-col items-center mt-5 space-y-4 xl:space-y-0 xl:space-x-3 xl:flex-row kesfet">
+
+                        <!--Stars-->
+                        <div class="stars">
+                            <i class="text-transparent fas fa-star bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text"></i>
+                            <i class="text-transparent fas fa-star bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text"></i>
+                            <i class="text-transparent fas fa-star bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text"></i>
+                            <i class="text-transparent fas fa-star bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text"></i>
+                            <i class="text-transparent fas fa-star bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text"></i>
+                        </div>
+
+                        <!--Button Area-->
+                        <span class="font-semibold text-transparent bg-gradient-to-t to-prize-pink from-prize-purple bg-clip-text">4/4 Lük Müzik Keyfi</span>
+                        <div class="h-6 border-[1.5px] border-l border-white hidden md:flex"></div>
+                        <a class="flex items-center px-5 py-2 space-x-2 transition duration-500 bg-white text-prize-black hover:text-white hover:bg-gradient-to-r hover:to-prize-pink hover:from-prize-purple" href=""><span>Keşfedin</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!--User Number-->
+                <div class="container px-5 pt-20 xl:py-20 xl: animate-slideDown501s">              
+                    <div class="p-[2px] rounded-md shadow-[_0_0_20px_rgb(255_255_255_/_100%)] shadow-prize-purple  bg-gradient-to-r from-prize-purple to-prize-pink ">
+                        <div class="flex flex-col items-center justify-center p-5 space-y-3 bg-white rounded-md dark:bg-black xl:items-start xl:space-y-0 xl:justify-between xl:flex-row ">
+                            <!--User-->
+                            <div class="flex items-center text-black dark:text-white UserArea">
+                                <span class="text-3xl font-semibold text-transparent bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text">+8.000</span>
+                                <span class="text-xl ms-2">Kullanıcı</span>
+                            </div>
+                            <!--User-->
+                            <div class="flex items-center text-black dark:text-white UserArea">
+                                <span class="text-3xl font-semibold text-transparent bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text">+10</span>
+                                <span class="text-xl ms-2">Tür Müzik</span>
+                            </div>
+                            <!--User-->
+                            <div class="flex items-center text-black dark:text-white UserArea">
+                                <span class="text-3xl font-semibold text-transparent bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text">+4.200</span>
+                                <span class="text-xl ms-2">Şuan Dinliyor</span>
+                            </div>
+                            <!--User-->
+                            <div class="flex items-center text-black dark:text-white just UserArea">
+                                <span class="text-3xl font-semibold text-transparent bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text">12.600</span>
+                                <span class="text-xl ms-2">Kullandı</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </section>
+        
+    </header>
+
+
+
+    <!--Prize Detail-->
+    <section class="bg-white dark:bg-prize-black">
+        <div class="container">
+            <div class="flex flex-col items-center justify-between invisible xl:pb-32 xl:pt-32 xl:flex-row xl:visible">
+
+                <!--Left Image-->
+                <div class="relative profil_Image group xl:basis-1/3">
+                    
+                    <img class="rounded-xl" src="assets/img/profil.png" alt="">
+
+                    <!--Image Details-->
+                    <div class="imgDetails">
+                        
+                        <!--Minimal Profil Items-->
+
+                        <div class="absolute z-10 -top-10 -right-16">
+                            <div class="flex items-center p-3 space-x-4 transition duration-500 bg-white rounded-lg card group-hover:text-white group-hover:bg-gradient-to-r group-hover:to-prize-pink group-hover:from-prize-purple group-hover:shadow-prize-purple group-hover:shadow-[_0_0_20px_rgb(255_255_255_/_100%)]">
+                                <!--Details Profil-->
+                                <img class="rounded-md" src="assets/img/yorum02.png" alt="">
+                                <!--Details Name-->
+                                <div class="flex flex-col items-start">
+                                    <span class="text-sm font-semibold">Ranold Richard</span>
+                                    <span class="text-xs opacity-25">December 2, 2018</span>
+                                </div>
+                                <i class="text-transparent fas fa-heart bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text group-hover:text-white"></i>
+                            </div>
+                        </div>
+
+                        <!--Minimal Profil Items-->
+
+                        <div class="absolute z-10 -bottom-10 -left-16">
+                            <div class="flex items-center p-3 space-x-4 transition duration-500 bg-white rounded-lg card group-hover:text-white group-hover:bg-gradient-to-r group-hover:to-prize-pink group-hover:from-prize-purple group-hover:shadow-prize-purple group-hover:shadow-[_0_0_20px_rgb(255_255_255_/_100%)]">
+                                <!--Details Profil-->
+                                <img class="rounded-md" src="assets/img/yorum01.png" alt="">
+                                <!--Details Name-->
+                                <div class="flex flex-col items-start">
+                                    <span class="text-sm font-semibold">Leslie Alexander</span>
+                                    <span class="text-xs opacity-25">February 11, 2014</span>
+                                </div>
+                                <i class="text-transparent fas fa-heart bg-gradient-to-r from-prize-purple to-prize-pink bg-clip-text group-hover:text-white"></i>
+                            </div>
+                        </div>
+
+                        <!--Minimal Profil Items-->
+                        <div class="absolute top-0 left-0 animate-autoMove">
+                            <img src="assets/img/circles.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Middle Items-->
+                <div class="xl:basis-2/3 xl:ps-8">
+                    <p class="text-xl font-bold text-transparent bg-gradient-to-t to-prize-pink from-prize-purple bg-clip-text">Her Türlü Müziği Keşfedin</p>
+                    <h2 class="mt-4 mb-8 text-4xl text-black dark:text-white">Melodik Sesiyle Kalbinizi Saran Sihirli Müzik Dünyası</h2>
+                    <svg class="mb-8 animate-bounce" xmlns="http://www.w3.org/2000/svg" width="449" height="10" fill="none" viewBox="0 0 449 10">
+                        <path fill="url(#a)" d="M448.5 5 441 .67v8.66L448.5 5ZM0 5.75h2.492v-1.5H0v1.5Zm7.475 0h4.983v-1.5H7.475v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Zm9.966 0h4.984v-1.5h-4.984v1.5Zm9.967 0h4.983v-1.5h-4.983v1.5Z"/>
+                        <defs>
+                        <linearGradient id="a" x1="0" x2=".089" y1="5" y2="11.839" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7000FF"/>
+                            <stop offset="1" stop-color="#FF67E7"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <a class="px-4 py-2 text-white bg-gradient-to-r from-prize-purple to-prize-pink" href="">Keşfedin</a>
+                </div>
+                
+                <!--Last Items-->
+                <div class="xl:basis-1/4 ">
+                    <img src="assets/img/music.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Music Card View-->
+    <section class="bg-white pb-72 dark:bg-prize-black">
+        <div class="container relative pt-8">
+            
+            <!--Background Image-->
+            <img class="invisible rounded-xl xl:visible" src="assets/img/guitar.png" alt="">
+            
+            <!--Content Detail-->
+            <div class="absolute left-0 right-0 -bottom-36">
+                <div class="flex flex-col justify-around gap-8 px-8 xl:px-0 xl:flex-row">
+                    
+                    <!--Card One-->
+                    <div class="basis-1/4 border border-prize-pink border-opacity-50 flex flex-col max-h-[24rem] space-y-4 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.25)] to-[rgba(255,103,231,0.25)] p-5 rounded-md text-white">
+                        <img class="object-cover w-full rounded-md" src="assets/img/card1.png" alt="">
+                        <h3>Keyif Dolu Melodilerle Öfkeli Seslerden Stresi Unutun</h3>
+                        <p class="text-xs font-light text-justify opacity-75">Günlük hayatın yoğun temposundan uzaklaşmak ve huzur dolu bir atmosferde yolculuğa çıkmak için sitemizdeki müzikleri keşfedin. Keyifli melodiler ve duygusal notalarla stresi geride bırakın, ruhunuzu dinlendirin.</p>
+                        <a href="#" class="absolute bottom-0 left-0 right-0 z-30 flex px-5 py-2 justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                            <div class="flex items-center space-x-2 Tbtn">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p class="">Görüntüle</p>
+                            </div>
+                            <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                    </div>
+
+                    <!--Card Two-->
+                    <div class="basis-1/4 xl:mt-20 border border-white border-opacity-50 flex flex-col space-y-4 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.25)] to-[rgba(255,103,231,0.25)] dark:from-[rgba(255,255,255,0.25)] dark:to-[rgba(255,255,255,0.05)] p-5 rounded-md text-white">
+                        <div class="relative">
+                            <img class="object-cover w-full rounded-md backdrop-filter backdrop-blur-lg" src="assets/img/card2.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center">
+                                <a class="flex items-center justify-center w-12 h-16 border border-white border-opacity-50 rounded-full backdrop-filter backdrop-blur-lg" href="#!">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3>Seslerin Dünyasına Adım Atın: Müziğin Büyülü Evreninde </h3>
+                        <p class="pb-12 text-xs font-light text-justify opacity-75">Sitemizdeki müzik platformunda, ünlü sanatçıların eşsiz performanslarıyla tanışma fırsatı yakalayın. Konser kayıtları, canlı performanslar ve özel ses kayıtlarıyla, favori sanatçılarınızın sizi büyüleyen sesine hayran kalacaksınız.</p>
+                        <div class="absolute bottom-0 left-0 right-0 z-30 flex px-5 py-2 justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(255,255,255,0.25)] to-[rgba(255,255,231,0.05)]">
+                            <div class="flex items-center py-1 Tbtn">
+                                <i class="mr-3 fas fa-volume-high"></i>
+                                <div class="sound wave loader">
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                </div>
+                                <div class="sound wave loader">
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                </div>
+                                <div class="sound wave loader ">
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                </div>
+                                <div class="sound wave loader">
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                </div>
+                                <div class="sound wave loader">
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                    <span class="stroke"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Card Three-->
+                    <div class="basis-1/4 border border-prize-pink border-opacity-50  flex flex-col max-h-[24rem] space-y-4 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.25)] to-[rgba(255,103,231,0.25)] p-5 rounded-md text-white">
+                        <img class="object-cover w-full rounded-md" src="assets/img/card3.png" alt="">
+                        <h3>Seslerin Dünyasına Adım Atın: Müziğin Büyülü Evreninde </h3>
+                        <p class="text-xs font-light text-justify opacity-75">Sitemizdeki geniş müzik koleksiyonuyla ritme ayak uydurun ve müziğin büyülü dünyasında dans edin. Her türden şarkı ve tarza erişebileceğiniz platformumuzda, kalbinizin ritmiyle en yeni tarzlarla senkronize olun.</p>
+                        <a href="#" class="absolute bottom-0 left-0 right-0 z-30 flex px-5 py-2 justify-between items-center backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.5)] to-[rgba(255,103,231,0.5)]">
+                            <div class="flex items-center space-x-2 Tbtn">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p class="">Görüntüle</p>
+                            </div>
+                            <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="backdrop-filter backdrop-blur-lg bg-gradient-to-r from-[rgba(112,0,255,0.25)] to-[rgba(255,103,231,0.25)] text-white bg-black ">
+        <div class="container px-10 py-20 xl:px-0">
+            
+            <!--Footer Links-->
+            <div class="flex flex-col items-center space-y-4 text-center xl:items-start xl:space-y-0 xl:text-start xl:flex-row">
+                
+                <!--Col One-->
+                <div class="flex flex-col items-center space-y-4 xl:items-start xl:w-1/4">
+                    <a href="#" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="168" height="36" fill="none" viewBox="0 0 168 36">
+                            <path fill="#fff" d="M25.872 14.432a5.14 5.14 0 0 1-.648 2.52c-.416.784-1.08 1.416-1.992 1.896-.896.48-2.032.72-3.408.72h-2.808V26h-3.36V9.248h6.168c1.296 0 2.4.224 3.312.672.912.448 1.592 1.064 2.04 1.848.464.784.696 1.672.696 2.664Zm-6.192 2.424c.928 0 1.616-.208 2.064-.624.448-.432.672-1.032.672-1.8 0-1.632-.912-2.448-2.736-2.448h-2.664v4.872h2.664Zm11.938-2.088a4.755 4.755 0 0 1 1.68-1.656c.704-.4 1.504-.6 2.4-.6v3.528h-.888c-1.056 0-1.856.248-2.4.744-.528.496-.792 1.36-.792 2.592V26h-3.36V12.704h3.36v2.064Zm8.047-3.648c-.592 0-1.088-.184-1.488-.552a1.925 1.925 0 0 1-.576-1.416c0-.56.192-1.024.576-1.392.4-.384.896-.576 1.488-.576s1.08.192 1.464.576c.4.368.6.832.6 1.392 0 .56-.2 1.032-.6 1.416-.384.368-.872.552-1.464.552Zm1.656 1.584V26h-3.36V12.704h3.36Zm6.391 10.536h5.928V26h-9.744v-2.712l5.808-7.824H43.92v-2.76h9.648v2.712l-5.856 7.824Zm20.89-4.176c0 .48-.032.912-.096 1.296h-9.72c.08.96.416 1.712 1.008 2.256.592.544 1.32.816 2.184.816 1.248 0 2.136-.536 2.664-1.608h3.624c-.384 1.28-1.12 2.336-2.208 3.168-1.088.816-2.424 1.224-4.008 1.224-1.28 0-2.432-.28-3.456-.84a6.182 6.182 0 0 1-2.376-2.424c-.56-1.04-.84-2.24-.84-3.6 0-1.376.28-2.584.84-3.624a5.861 5.861 0 0 1 2.352-2.4c1.008-.56 2.168-.84 3.48-.84 1.264 0 2.392.272 3.384.816a5.63 5.63 0 0 1 2.328 2.328c.56.992.84 2.136.84 3.432Zm-3.48-.96c-.016-.864-.328-1.552-.936-2.064-.608-.528-1.352-.792-2.232-.792-.832 0-1.536.256-2.112.768-.56.496-.904 1.192-1.032 2.088h6.312Z"/>
+                            <path stroke="#fff" d="M.5.5h167v35H.5z"/>
+                            <path fill="url(#a)" d="M81 0h87v36H81z"/>
+                            <path fill="#fff" d="M108.92 9.248V26h-3.36V15.104L101.072 26h-2.544l-4.512-10.896V26h-3.36V9.248h3.816L99.8 21.704l5.328-12.456h3.792Zm15.874 3.456V26h-3.384v-1.68c-.432.576-1 1.032-1.704 1.368-.688.32-1.44.48-2.256.48-1.04 0-1.96-.216-2.76-.648-.8-.448-1.432-1.096-1.896-1.944-.448-.864-.672-1.888-.672-3.072v-7.8h3.36v7.32c0 1.056.264 1.872.792 2.448.528.56 1.248.84 2.16.84.928 0 1.656-.28 2.184-.84.528-.576.792-1.392.792-2.448v-7.32h3.384Zm8.403 13.512c-1.088 0-2.064-.192-2.928-.576-.864-.4-1.552-.936-2.064-1.608a4.092 4.092 0 0 1-.816-2.232h3.384c.064.512.312.936.744 1.272.448.336 1 .504 1.656.504.64 0 1.136-.128 1.488-.384.368-.256.552-.584.552-.984 0-.432-.224-.752-.672-.96-.432-.224-1.128-.464-2.088-.72-.992-.24-1.808-.488-2.448-.744a4.351 4.351 0 0 1-1.632-1.176c-.448-.528-.672-1.24-.672-2.136 0-.736.208-1.408.624-2.016.432-.608 1.04-1.088 1.824-1.44.8-.352 1.736-.528 2.808-.528 1.584 0 2.848.4 3.792 1.2.944.784 1.464 1.848 1.56 3.192h-3.216c-.048-.528-.272-.944-.672-1.248-.384-.32-.904-.48-1.56-.48-.608 0-1.08.112-1.416.336-.32.224-.48.536-.48.936 0 .448.224.792.672 1.032.448.224 1.144.456 2.088.696.96.24 1.752.488 2.376.744.624.256 1.16.656 1.608 1.2.464.528.704 1.232.72 2.112 0 .768-.216 1.456-.648 2.064-.416.608-1.024 1.088-1.824 1.44-.784.336-1.704.504-2.76.504Zm9.694-15.096c-.592 0-1.088-.184-1.488-.552a1.925 1.925 0 0 1-.576-1.416c0-.56.192-1.024.576-1.392.4-.384.896-.576 1.488-.576s1.08.192 1.464.576c.4.368.6.832.6 1.392 0 .56-.2 1.032-.6 1.416-.384.368-.872.552-1.464.552Zm1.656 1.584V26h-3.36V12.704h3.36Zm2.456 6.648c0-1.376.28-2.576.84-3.6.56-1.04 1.336-1.84 2.328-2.4.992-.576 2.128-.864 3.408-.864 1.648 0 3.008.416 4.08 1.248 1.088.816 1.816 1.968 2.184 3.456h-3.624c-.192-.576-.52-1.024-.984-1.344-.448-.336-1.008-.504-1.68-.504-.96 0-1.72.352-2.28 1.056-.56.688-.84 1.672-.84 2.952 0 1.264.28 2.248.84 2.952.56.688 1.32 1.032 2.28 1.032 1.36 0 2.248-.608 2.664-1.824h3.624c-.368 1.44-1.096 2.584-2.184 3.432-1.088.848-2.448 1.272-4.08 1.272-1.28 0-2.416-.28-3.408-.84a6.108 6.108 0 0 1-2.328-2.4c-.56-1.04-.84-2.248-.84-3.624Z"/>
+                            <defs>
+                            <linearGradient id="a" x1="81" x2="168" y1="0" y2="36" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7000FF"/>
+                            <stop offset="1" stop-color="#FF67E7"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <p>Müziğin Ritmini Kalbinizde Hissedin.”</p>
+                    <small class="font-light">Prize Music Farklılık Yaratır.</small>
+                    <p class="w-3/4 text-transparent bg-gradient-to-r to-prize-pink from-prize-purple bg-clip-text">Ritminizi Değiştirmeye Bir Müzik</p>
+                </div>
+                
+                <!--Col Two-->
+                <div class="flex flex-col items-center space-y-4 xl:items-start xl:w-1/4">
+                    <p>Lokasyonlarımız</p>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">4517 Washington Ave. Manchester, Kentucky 39495</a>
+                    
+                    <!--Social Media & Theme-->
+                    <div class="SocialTheme">
+
+                        <div class="flex items-center space-x-0 md:space-x-4">
+
+                            <!--Social Media-->
+                            <ul class="items-center hidden space-x-4 md:flex">
+                                <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" class="text-white transition-all duration-500 hover:text-prize-pink"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+        
+                            <div class="h-6 border-[1.5px] border-l border-white hidden md:flex"></div>
+        
+                            <!--Label Area-->
+                            <label class="relative flex items-center cursor-pointer">
+                                
+                                <!--Checkbox-->
+                                <input type="checkbox" class="sr-only">
+        
+                                <!--iconData-->
+                                <div class="flex p-1 transition duration-500 rounded-md bg-prize-black bg-gradient-to-r to-prize-pink from-prize-purple">
+                                    <span class="flex items-center justify-center w-5 h-6 mr-1 bg-white rounded text-amber-950 dark:bg-transparent dark:text-white iconSun ">
+                                        <i class="fas fa-sun"></i>
+                                    </span>
+                                    <span class="flex items-center justify-center w-5 h-6 text-white bg-transparent rounded dark:bg-prize-black dark:text-white iconMoon ">
+                                        <i class="fas fa-moon"></i>
+                                    </span>
+                                </div>
+        
+                            </label>
+        
+                        </div>
+                    </div>
+                    
+                    <!--Email-->
+                    <a class="flex items-center space-x-2 transition duration-500 email hover:text-prize-pink" href="#">
+                        <i class="fa fa-envelope"></i>
+                        <p class="text-sm font-light">Prize@heyecanmusic.com.tr</p>
+                    </a>
+
+                </div>
+
+                <!--Col Three-->
+                <div class="flex flex-col space-y-4 xl:w-1/4">
+                    <p>En Yakın Etkinlik Tarihleri</p>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">8 Mayıs, Türk Halk Müziği Gecesi</a>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">16 Mayıs, Ağır Metal Müzikleri</a>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">4 Haziran, Ünlü Domates Festivali</a>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">21 Haziran, Ünlüler Cosplay Müzik</a>
+                    <a class="text-sm font-light transition duration-500 hover:text-prize-pink" href="#">28 Haziran, Caz Festivali Gecesi</a>
+                </div>
+
+                <!--Col For-->
+                <div class="flex flex-col space-y-4 xl:w-1/4">
+                    <p>Festivallerden Görüntüler</p>
+                    <div class="grid grid-cols-3 gap-3">
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest1.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest2.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest3.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest4.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest5.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                        <a class="relative group" href="#">
+                            <img src="assets/img/fest6.png" alt="">
+                            <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center invisible text-center bg-opacity-75 overlay bg-prize-pink group-hover:visible">
+                                <p class="text-sm">Görüntüle</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    
+
+    <!--Javascript Custom-->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/slider.js"></script>
+</body>
+</html>
