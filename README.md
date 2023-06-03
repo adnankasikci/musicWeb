@@ -1,3 +1,4 @@
+
 ## Prize Music Site with Tailwind
 
 Tailwind yaklaşımlarına aşinalık ve tailwind teknolojisini anlama.
@@ -46,7 +47,6 @@ Proje dosyalarını bilgisayarınıza indirdikten sonra aşağıdaki adımları 
 
 
 ## Kullanım
----
 
 Proje kullanımıyla ilgili aşağıdaki detayları göz önünde bulundurun:
 
@@ -67,7 +67,6 @@ Proje kullanımıyla ilgili aşağıdaki detayları göz önünde bulundurun:
 ```
 
 ## Katkıda Bulunma
----
 
 Eğer projeye katkıda bulunmak isterseniz, lütfen aşağıdaki adımları takip edin:
 
@@ -78,7 +77,7 @@ Eğer projeye katkıda bulunmak isterseniz, lütfen aşağıdaki adımları taki
 5. Pull Request göndermek için GitHub üzerinden talep oluşturun.
 
 ## İletişim
----
+
 Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, lütfen göndermekten çekinmeyin.:relieved:
 
 Daha fazla bilgi için [proje dokümantasyonunu](https://github.com/ad0pa/musicWeb) ziyaret edin.
